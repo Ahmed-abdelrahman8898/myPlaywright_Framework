@@ -51,7 +51,7 @@ export default defineConfig({
 
     video: "retain-on-failure",
 
-    headless: env.headless,
+    headless: process.env.CI === "true" ? true : env.headless,
   },
 
   projects: [

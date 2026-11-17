@@ -1,37 +1,37 @@
-<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="14.203691">
-<testsuite name="api\auth.spec.ts" timestamp="2026-11-17T20:28:11.561Z" hostname="chromium" tests="1" failures="0" skipped="0" time="0.71" errors="0">
-<testcase name="API - Login and get current user" classname="api\auth.spec.ts" time="0.71">
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="14.213752000000001">
+<testsuite name="api\auth.spec.ts" timestamp="2026-11-17T20:31:56.209Z" hostname="chromium" tests="1" failures="0" skipped="0" time="0.788" errors="0">
+<testcase name="API - Login and get current user" classname="api\auth.spec.ts" time="0.788">
 <system-out>
-<![CDATA[[2026-11-17T20:28:12.427Z] [INFO] Sending login request
-[2026-11-17T20:28:12.961Z] [INFO] Login successful for emilys
-[2026-11-17T20:28:12.962Z] [INFO] User ID: 1
-[2026-11-17T20:28:12.962Z] [INFO] Access token received successfully
-[2026-11-17T20:28:12.967Z] [INFO] Sending get current user request
-[2026-11-17T20:28:13.116Z] [INFO] Current user: emilys
-[2026-11-17T20:28:13.116Z] [INFO] Email: emily.johnson@x.dummyjson.com
+<![CDATA[[2026-11-17T20:31:57.111Z] [INFO] Sending login request
+[2026-11-17T20:31:57.707Z] [INFO] Login successful for emilys
+[2026-11-17T20:31:57.707Z] [INFO] User ID: 1
+[2026-11-17T20:31:57.707Z] [INFO] Access token received successfully
+[2026-11-17T20:31:57.709Z] [INFO] Sending get current user request
+[2026-11-17T20:31:57.877Z] [INFO] Current user: emilys
+[2026-11-17T20:31:57.877Z] [INFO] Email: emily.johnson@x.dummyjson.com
 ]]>
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="e2e\test1.spec.ts" timestamp="2026-11-17T20:28:11.561Z" hostname="chromium" tests="1" failures="0" skipped="0" time="12.336" errors="0">
-<testcase name="Open Playwright homepage" classname="e2e\test1.spec.ts" time="12.336">
+<testsuite name="e2e\test1.spec.ts" timestamp="2026-11-17T20:31:56.209Z" hostname="chromium" tests="1" failures="0" skipped="0" time="12.63" errors="0">
+<testcase name="Open Playwright homepage" classname="e2e\test1.spec.ts" time="12.63">
 <system-out>
-<![CDATA[[2026-11-17T20:28:13.434Z] [DEBUG] Hello from the test!
-[2026-11-17T20:28:13.434Z] [INFO] Starting authentication
-[2026-11-17T20:28:14.195Z] [INFO] Entering credentials
-[2026-11-17T20:28:14.195Z] [INFO] Entering username : dev@dev.com
-[2026-11-17T20:28:14.195Z] [DEBUG] Filling value: dev@dev.com
-[2026-11-17T20:28:14.236Z] [INFO] Entering password
-[2026-11-17T20:28:14.236Z] [DEBUG] Filling value: dev123456
-[2026-11-17T20:28:14.251Z] [INFO] Clicking Login
-[2026-11-17T20:28:14.252Z] [DEBUG] Clicking element
-[2026-11-17T20:28:20.442Z] [DEBUG] Waiting for element to become visible
-[2026-11-17T20:28:20.488Z] [INFO] Login is successful 
-[2026-11-17T20:28:20.488Z] [INFO] Authentication completed
-[2026-11-17T20:28:20.489Z] [INFO] Clicking the button " Work Items "
-[2026-11-17T20:28:20.489Z] [DEBUG] Waiting for element to become visible
-[2026-11-17T20:28:20.501Z] [DEBUG] Clicking element
-[2026-11-17T20:28:22.006Z] [INFO] button " Work Items " has been clicked successfuly
+<![CDATA[[2026-11-17T20:31:57.752Z] [DEBUG] Hello from the test!
+[2026-11-17T20:31:57.752Z] [INFO] Starting authentication
+[2026-11-17T20:31:58.617Z] [INFO] Entering credentials
+[2026-11-17T20:31:58.618Z] [INFO] Entering username : dev@dev.com
+[2026-11-17T20:31:58.618Z] [DEBUG] Filling value: dev@dev.com
+[2026-11-17T20:31:58.681Z] [INFO] Entering password
+[2026-11-17T20:31:58.681Z] [DEBUG] Filling value: dev123456
+[2026-11-17T20:31:58.728Z] [INFO] Clicking Login
+[2026-11-17T20:31:58.729Z] [DEBUG] Clicking element
+[2026-11-17T20:32:05.049Z] [DEBUG] Waiting for element to become visible
+[2026-11-17T20:32:05.095Z] [INFO] Login is successful 
+[2026-11-17T20:32:05.096Z] [INFO] Authentication completed
+[2026-11-17T20:32:05.098Z] [INFO] Clicking the button " Work Items "
+[2026-11-17T20:32:05.099Z] [DEBUG] Waiting for element to become visible
+[2026-11-17T20:32:05.110Z] [DEBUG] Clicking element
+[2026-11-17T20:32:06.619Z] [INFO] button " Work Items " has been clicked successfuly
 ]]>
 </system-out>
 </testcase>
