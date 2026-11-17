@@ -4,11 +4,10 @@ on:
   push:
   pull_request:
 
-  # Run every night at 02:00 UTC
-  schedule:
-    - cron: "0 2 * * *"
+  # Enable when you want nightly execution
+  # schedule:
+  #   - cron: "0 2 * * *"
 
-  # Allow manual environment selection
   workflow_dispatch:
     inputs:
       test_environment:
@@ -21,10 +20,6 @@ on:
           - stage
           - test
 
-# Default environment for automatic runs
-env:
-  DEFAULT_TEST_ENV: dev
-
 permissions:
   contents: read
 
@@ -33,31 +28,16 @@ jobs:
     name: Playwright Tests
     runs-on: ubuntu-latest
 
-    # Manual selection takes priority.
-    # Push, PR and nightly runs use DEFAULT_TEST_ENV.
-    environment:
-      name: ${{ github.event_name == 'workflow_dispatch' && inputs.test_environment || 'dev' }}
-
     env:
       CI: "true"
-      TEST_ENV: ${{ github.event_name == 'workflow_dispatch' && inputs.test_environment || 'dev' }}
+      TEST_ENV: ${{ inputs.test_environment || 'dev' }}
       HEADLESS: "true"
-
-      BASE_URL: ${{ vars.BASE_URL }}
-      ACME_EMAIL: ${{ secrets.ACME_EMAIL }}
-      PASSWORD: ${{ secrets.PASSWORD }}
-
-      API_BASE_URL: ${{ vars.API_BASE_URL }}
-      API_USERNAME: ${{ secrets.API_USERNAME }}
-      API_PASSWORD: ${{ secrets.API_PASSWORD }}
-
-      LOG_LEVEL: INFO
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -69,13 +49,13 @@ jobs:
       - name: Install Playwright Chromium
         run: npx playwright install --with-deps chromium
 
-      - name: Type check
+      - name: Type-check TypeScript
         run: npm run typecheck
 
-      - name: Run tests
+      - name: Run Playwright tests
         run: npm test
 
-      - name: Upload reports, screenshots, videos and traces
+      - name: Upload Playwright reports and failure artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
