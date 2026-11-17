@@ -9,6 +9,7 @@
     "test:headed": "playwright test --headed",
     "test:debug": "playwright test --debug",
     "codegen": "playwright codegen",
+    "typecheck": "tsc --noEmit",
     "show-report": "playwright show-report",
     "lint": "eslint .",
     "format": "prettier --write ."
