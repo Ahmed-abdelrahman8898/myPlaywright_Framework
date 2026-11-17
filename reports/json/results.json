@@ -1,0 +1,302 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\Ahmed Alwany\\Documents\\myPlaywright_Framework\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "C:\\Users\\Ahmed Alwany\\Documents\\myPlaywright_Framework\\playwright.config.ts",
+    "rootDir": "C:/Users/Ahmed Alwany/Documents/myPlaywright_Framework/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ahmed Alwany/Documents/myPlaywright_Framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Ahmed Alwany/Documents/myPlaywright_Framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ahmed Alwany\\Documents\\myPlaywright_Framework\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "name": "chromium",
+        "testDir": "C:\\Users\\Ahmed Alwany\\Documents\\myPlaywright_Framework\\tests",
+        "snapshotDir": "C:\\Users\\Ahmed Alwany\\Documents\\myPlaywright_Framework\\tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "https://acme-test.uipath.com",
+          "trace": "on-first-retry",
+          "screenshot": "only-on-failure",
+          "video": "retain-on-failure",
+          "headless": false,
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/159.0.8154.6 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "never"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "reports/junit/results.xml"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/json/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "api\\auth.spec.ts",
+      "file": "api/auth.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "API - Login and get current user",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 935,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[2026-11-16T20:54:20.191Z] [INFO] Sending login request\n"
+                    },
+                    {
+                      "text": "[2026-11-16T20:54:20.933Z] [INFO] Login successful for emilys\n"
+                    },
+                    {
+                      "text": "[2026-11-16T20:54:20.933Z] [INFO] User ID: 1\n"
+                    },
+                    {
+                      "text": "[2026-11-16T20:54:20.933Z] [INFO] Access token received successfully\n"
+                    },
+                    {
+                      "text": "[2026-11-16T20:54:20.935Z] [INFO] Sending get current user request\n"
+                    },
+                    {
+                      "text": "[2026-11-16T20:54:21.097Z] [INFO] Current user: emilys\n"
+                    },
+                    {
+                      "text": "[2026-11-16T20:54:21.098Z] [INFO] Email: emily.johnson@x.dummyjson.com\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "1. Login and extract access token",
+                      "duration": 744
+                    },
+                    {
+                      "title": "2. Get current user using access token",
+                      "duration": 163
+                    }
+                  ],
+                  "startTime": "2026-11-16T20:54:20.116Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bead371ebbc451c1152-f8e82eb36a938e8041e7",
+          "file": "api/auth.spec.ts",
+          "line": 20,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "e2e\\test1.spec.ts",
+      "file": "e2e/test1.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Open Playwright homepage",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 14442,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[2026-11-16T20:54:21.542Z] [DEBUG] Hello from the test!\n"
+                    },
+                    {
+                      "text": "[2026-11-16T20:54:21.543Z] [INFO] Starting authentication\n"
+                    },
+                    {
+                      "text": "[2026-11-16T20:54:22.584Z] [INFO] Entering credentials\n"
+                    },
+                    {
+                      "text": "[2026-11-16T20:54:22.585Z] [INFO] Entering username : dev@dev.com\n"
+                    },
+                    {
+                      "text": "[2026-11-16T20:54:22.586Z] [DEBUG] Filling value: dev@dev.com\n"
+                    },
+                    {
+                      "text": "[2026-11-16T20:54:22.712Z] [INFO] Entering password\n"
+                    },
+                    {
+                      "text": "[2026-11-16T20:54:22.712Z] [DEBUG] Filling value: dev123456\n"
+                    },
+                    {
+                      "text": "[2026-11-16T20:54:22.772Z] [INFO] Clicking Login\n"
+                    },
+                    {
+                      "text": "[2026-11-16T20:54:22.772Z] [DEBUG] Clicking element\n"
+                    },
+                    {
+                      "text": "[2026-11-16T20:54:29.175Z] [DEBUG] Waiting for element to become visible\n"
+                    },
+                    {
+                      "text": "[2026-11-16T20:54:29.281Z] [INFO] Login is successful \n"
+                    },
+                    {
+                      "text": "[2026-11-16T20:54:29.281Z] [INFO] Authentication completed\n"
+                    },
+                    {
+                      "text": "[2026-11-16T20:54:29.282Z] [INFO] Clicking the button \" Work Items \"\n"
+                    },
+                    {
+                      "text": "[2026-11-16T20:54:29.282Z] [DEBUG] Waiting for element to become visible\n"
+                    },
+                    {
+                      "text": "[2026-11-16T20:54:29.303Z] [DEBUG] Clicking element\n"
+                    },
+                    {
+                      "text": "[2026-11-16T20:54:31.368Z] [INFO] button \" Work Items \" has been clicked successfuly\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Open Login Page",
+                      "duration": 7739
+                    },
+                    {
+                      "title": "Verify Dashboard",
+                      "duration": 5094
+                    }
+                  ],
+                  "startTime": "2026-11-16T20:54:20.155Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d63aad26344273ea1bfd-546ffb9a919140fdd06b",
+          "file": "e2e/test1.spec.ts",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-16T20:54:18.118Z",
+    "duration": 17872.136000000002,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
